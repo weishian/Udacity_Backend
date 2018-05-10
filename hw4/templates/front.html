@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+  {% for p in posts %}
+    {{ p.render() | safe }}
+    <br><br>
+  {% endfor %}
+
+  <div>
+    <a class="login-link" href="/blog/newpost">New Post</a>
+  </div>
+
+{% endblock %}
